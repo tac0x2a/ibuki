@@ -1,4 +1,7 @@
 # ibuki
+
+![Ibuki](./frontend/src/assets/ibuki_logo.svg)
+
 Ibuki is a scraping platform.
 
 # Frontend
