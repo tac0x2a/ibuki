@@ -6,12 +6,6 @@ RUN apt-get install -y procps
 
 # RUN mkdir /project
 
-# ADD package.json /project
-# ADD package-lock.json /project
-
-# WORKDIR /project
-
-# RUN npm install
-
-
 WORKDIR /backend
+COPY package*.json ./
+RUN npm install

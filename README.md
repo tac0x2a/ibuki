@@ -4,6 +4,13 @@
 
 Ibuki is a scraping platform.
 
+# Development
+
+```
+$ docker-compose build
+$ docker-compose up
+```
+
 # Frontend
 ```
 $ npm install -g @vue/cli@next
