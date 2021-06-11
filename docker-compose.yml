@@ -1,0 +1,27 @@
+# For development
+version: '3'
+services:
+  backend:
+    container_name: ibuki-backend
+    build:
+      context: backend
+    ports:
+      - '3001:3001'
+    volumes:
+      - './backend:/backend'
+    command: 'npm run start:debug'
+
+  # WIP
+  # frontend:
+  #   container_name: ibuki-frontend
+  #   build:
+  #     context: backend
+  #   ports:
+  #     - '3000:3000'
+  #   volumes:
+  #     - './frontend:/frontend'
+  #     - './backend:/backend'
+  #   environment:
+  #     API_HOST: ibuki-backend
+
+  #   command: 'npm run dev'
