@@ -5,5 +5,3 @@ RUN apt-get update
 RUN apt-get install -y procps
 
 WORKDIR /backend
-COPY package*.json ./
-RUN npm install

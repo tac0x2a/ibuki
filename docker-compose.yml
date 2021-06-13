@@ -8,8 +8,12 @@ services:
     ports:
       - '3001:3001'
     volumes:
-      - './backend:/backend'
-      - '/var/run/docker.sock:/var/run/docker.sock'
+      - type: bind
+        source: './backend'
+        target: '/backend'
+      - type: bind
+        source: '/var/run/docker.sock'
+        target: '/var/run/docker.sock'
     command: 'npm run start:debug'
 
   frontend:
@@ -19,5 +23,7 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - './frontend:/frontend'
+      - type: bind
+        source: './frontend'
+        target: '/frontend'
     command: 'npm run dev'
