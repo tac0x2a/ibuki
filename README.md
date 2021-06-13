@@ -6,12 +6,28 @@ Ibuki is a scraping platform.
 
 # Development
 
+## Init
 ```
 $ docker-compose build
-$ docker-compose up
+$ docker-compose run --rm frontend sh -c "npm install"
+$ docker-compose run --rm backend  sh -c "npm install"
 ```
 
-# Frontend
+## Run
+```
+$ docker-compose up
+
+# Frontend: http://localhost:3000
+# Backend:  http://localhost:3001
+```
+
+## Add new package
+```
+$ docker-compose run --rm {backend,frontend} sh -c "npm install <package>"
+```
+
+## Without Docker
+### Frontend
 ```
 $ npm install -g @vue/cli@next
 $ cd frontend
@@ -22,7 +38,7 @@ $ npm run dev
 # access http://localhost:3000
 ```
 
-# Backend
+### Backend
 ```
 $ npm install -g @nestjs/cli
 $ cd backend
