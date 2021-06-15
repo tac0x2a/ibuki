@@ -6,6 +6,7 @@
     "build": "vuedx-typecheck . && vite build"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "vue": "^3.1.1"
   },
   "devDependencies": {
